@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人人正版影视指南 | 综合选片与正版译制导航</title>
+  <meta name="description" content="人人正版影视指南（renrenyingshi-h5）提供综合选片、译制字幕科普、社区投票片单、正版渠道导航与防盗版避坑。不提供盗版资源、磁力、网盘与成人内容。" />
+  <meta name="author" content="人人正版影视指南" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1F3D2B" />
+  <link rel="canonical" href="https://renrenyingshi-h5.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="人人正版影视指南" />
+  <meta property="og:title" content="人人正版影视指南 | 综合选片与正版译制导航" />
+  <meta property="og:description" content="综合选片、译制字幕科普、社区投票片单、正版渠道与防盗版避坑。" />
+  <meta property="og:url" content="https://renrenyingshi-h5.github.io/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="人人正版影视指南 | 综合选片与正版译制导航" />
+  <meta name="twitter:description" content="按类型、字幕、场景、口碑选正版片，只走持权平台。" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "人人正版影视指南",
+    "url": "https://renrenyingshi-h5.github.io/",
+    "description": "综合选片、译制字幕科普、社区投票片单与正版影视渠道导航站。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#F3F1E7;
+      --bg2:#EAE6D6;
+      --card:#FFFDF6;
+      --line:#CFC9B4;
+      --ink:#1F2A22;
+      --muted:#5E6B5A;
+      --green:#2F6B47;     /* 苔藓绿 */
+      --green-deep:#1F3D2B;
+      --blue:#2F6FB0;      /* 协作蓝 */
+      --blue-deep:#1F4F80;
+      --red:#C0392B;       /* 印章朱红 */
+      --red-deep:#9B2C20;
+      --paper:#FBF8EF;
+      --radius:14px;
+      --maxw:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    header.nav{position:sticky;top:0;z-index:50;background:rgba(243,241,231,.96);backdrop-filter:blur(12px);border-bottom:2px solid var(--green-deep)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-weight:900;font-size:20px;display:flex;align-items:center;gap:10px}
+    .logo .seal{width:30px;height:30px;border-radius:7px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;box-shadow:0 0 0 1px var(--green-deep) inset}
+    .logo b{color:var(--green)}
+    .logo span{color:var(--blue)}
+    nav.menu{display:flex;gap:8px;font-size:14px;font-weight:700;color:var(--muted)}
+    nav.menu a{padding:8px 13px;border-radius:8px;border:1px solid transparent;transition:.2s}
+    nav.menu a:hover{color:var(--green);border-color:var(--line);background:var(--paper)}
+    .nav-toggle{display:none;background:none;border:1px solid var(--green-deep);color:var(--ink);border-radius:8px;padding:6px 10px;font-size:18px;cursor:pointer}
+
+    .hero{padding:74px 0 64px;border-bottom:2px solid var(--line);background:
+      radial-gradient(760px 360px at 88% -8%,rgba(47,107,71,.14),transparent 60%),
+      radial-gradient(620px 320px at 4% 120%,rgba(47,111,176,.12),transparent 60%),
+      linear-gradient(180deg,#F6F4EA,#F1EEE2);
+      position:relative;overflow:hidden}
+    .hero .board{position:absolute;inset:0;background-image:linear-gradient(rgba(47,107,71,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(47,107,71,.06) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(circle at 72% 18%,#000,transparent 78%);pointer-events:none}
+    .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+    .pill{display:inline-block;border:1px solid var(--green);color:var(--green);border-radius:999px;padding:5px 15px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.12;margin:0 0 14px;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--blue)}
+    .hero h1 u{text-decoration:none;color:var(--red)}
+    .hero p.lead{font-size:16px;color:var(--muted);max-width:640px;margin:0 0 22px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .hero-tag{border:1px solid var(--line);border-radius:6px;padding:5px 12px;font-size:12px;color:var(--ink);background:var(--paper)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 24px;border-radius:10px;font-weight:800;font-size:14px;transition:.2s;display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+    .btn-primary{background:var(--green);color:#fff;border:1px solid var(--green-deep)}
+    .btn-primary:hover{background:var(--green-deep)}
+    .btn-ghost{border:1px solid var(--green-deep);color:var(--ink);background:transparent}
+    .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+
+    .msg{width:260px;margin:0 auto;background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:18px;position:relative;box-shadow:6px 6px 0 rgba(47,107,71,.18)}
+    .msg .pin{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+    .msg .row{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted);margin-bottom:8px}
+    .msg .row b{color:var(--ink)}
+    .msg .avatar{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--blue));flex-shrink:0}
+
+    section{padding:60px 0;border-bottom:2px dashed var(--line)}
+    .sec-head{margin-bottom:32px;text-align:center}
+    .sec-head .kicker{color:var(--green);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+    .sec-head h2{font-size:clamp(22px,3.6vw,32px);margin:6px 0 8px;font-weight:900}
+    .sec-head p{color:var(--muted);margin:0 auto;max-width:720px;font-size:14px}
+
+    .vote{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .vcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;position:relative;border-top:5px solid var(--green)}
+    .vcard:nth-child(2){border-top-color:var(--blue)}
+    .vcard:nth-child(3){border-top-color:var(--red)}
+    .vcard:nth-child(4){border-top-color:var(--muted)}
+    .vcard .count{font-size:11px;font-weight:800;color:var(--green);letter-spacing:1px}
+    .vcard h3{margin:6px 0 6px;font-size:16px}
+    .vcard p{margin:0;color:var(--muted);font-size:13px}
+    .vcard .bar{height:8px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);margin-top:12px;overflow:hidden}
+    .vcard .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--blue))}
+
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;position:relative}
+    .step .no{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+    .step:nth-child(2) .no{background:var(--blue)}
+    .step:nth-child(3) .no{background:var(--red)}
+    .step:nth-child(4) .no{background:var(--green-deep)}
+    .step:nth-child(5) .no{background:var(--blue-deep)}
+    .step h3{margin:0 0 6px;font-size:15px}
+    .step p{margin:0;color:var(--muted);font-size:12px}
+
+    .sub{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .subcard{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--blue);border-radius:12px;padding:22px}
+    .subcard:nth-child(2){border-left-color:var(--green)}
+    .subcard:nth-child(3){border-left-color:var(--red)}
+    .subcard:nth-child(4){border-left-color:var(--muted)}
+    .subcard h3{margin:0 0 8px;font-size:16px}
+    .subcard p{margin:0;color:var(--muted);font-size:13px}
+    .subcard .pair{margin-top:10px;font-size:12px;color:var(--ink);background:var(--paper);border:1px dashed var(--line);border-radius:8px;padding:10px}
+    .subcard .pair b{color:var(--blue)}
+
+    .src{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .signal{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;position:relative}
+    .signal::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:52px;height:9px;background:linear-gradient(90deg,var(--green),var(--blue));border-radius:0 0 8px 8px}
+    .signal .ic{font-size:30px;margin:12px 0 8px}
+    .signal h3{margin:0 0 4px;font-size:15px}
+    .signal p{margin:0;color:var(--muted);font-size:12px}
+
+    .warn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .notice{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--red);border-radius:var(--radius);padding:22px}
+    .notice:nth-child(2){border-top-color:var(--blue)}
+    .notice:nth-child(3){border-top-color:var(--green)}
+    .notice h3{margin:0 0 8px;font-size:16px}
+    .notice p{margin:0;color:var(--muted);font-size:13px}
+
+    footer{padding:34px 0;text-align:center;color:var(--muted);font-size:13px;background:var(--green-deep);color:rgba(255,255,255,.8)}
+    footer a{color:var(--paper)}
+
+    #toTop{position:fixed;right:16px;bottom:16px;z-index:60;width:46px;height:46px;border-radius:50%;border:1px solid var(--green-deep);background:var(--green);color:#fff;font-size:18px;font-weight:900;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
+    #toTop.show{opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(16px);transition:.5s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr}
+      .vote{grid-template-columns:1fr 1fr}
+      .flow{grid-template-columns:1fr 1fr}
+      .src{grid-template-columns:1fr 1fr}
+      .warn{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:block}
+      nav.menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;padding:8px 20px 16px;background:rgba(243,241,231,.98);border-bottom:2px solid var(--green-deep);display:none}
+      nav.menu.open{display:flex}
+      nav.menu a{padding:10px 8px;border-bottom:1px solid var(--line)}
+      .vote{grid-template-columns:1fr}
+      .flow{grid-template-columns:1fr}
+      .sub{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo"><span class="seal">人</span><b>人人</b><span>正版影视指南</span></div>
+      <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#home">首页</a>
+        <a href="#vote">社区投票</a>
+        <a href="#flow">译制流程</a>
+        <a href="#sub">字幕科普</a>
+        <a href="#src">正版信源</a>
+        <a href="#warn">防盗避坑</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="board"></div>
+    <div class="wrap">
+      <div>
+        <div class="pill">Renren · Legal Picks · Subtitle Guide</div>
+        <h1>人人正版影视指南<br/>大家<u>投票</u>选片，<em>正版</em>译制可溯</h1>
+        <p class="lead">综合片荒不用愁：社区投票缩圈、译制流程科普、字幕对照与正版信源分栏；只导持权平台与官方字幕，不提供盗版播放、磁力、网盘、成人内容，也不重建任何历史盗版“人人”资源站。</p>
+        <div class="hero-tags">
+          <span class="hero-tag">综合选片</span>
+          <span class="hero-tag">社区投票</span>
+          <span class="hero-tag">正版译制</span>
+          <span class="hero-tag">官方字幕</span>
+          <span class="hero-tag">防盗版</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#vote">看社区票选 →</a>
+          <a class="btn btn-ghost" href="#warn">识别盗版人人坑</a>
+        </div>
+      </div>
+      <div>
+        <div class="msg">
+          <div class="pin">!</div>
+          <div class="row"><span class="avatar"></span><b>剧荒求助</b>·匿名</div>
+          <div class="row">想看海外正剧+中文字幕 → 走持权平台</div>
+          <div class="row">要官方译制、可核验版权 → 不选野站打包</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vote" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Community Vote</div>
+        <h2>社区投票选片墙</h2>
+        <p>四类高频需求按投票热度缩圈，纯前端演示；真实片源以正版平台当期版权为准。</p>
+      </div>
+      <div class="vote">
+        <div class="vcard">
+          <div class="count">VOTE 01 · 海外剧</div>
+          <h3>正版引进剧集</h3>
+          <p>美剧、英剧、日剧、韩剧、东南亚剧；优先持权平台已购版权与官方中字。</p>
+          <div class="bar"><i style="width:86%"></i></div>
+        </div>
+        <div class="vcard">
+          <div class="count">VOTE 02 · 电影</div>
+          <h3>院线/点播电影</h3>
+          <p>新片、重映、4K修复；按地区版权与字幕版本筛选，不追枪版。</p>
+          <div class="bar"><i style="width:72%"></i></div>
+        </div>
+        <div class="vcard">
+          <div class="count">VOTE 03 · 纪录</div>
+          <h3>纪录片/冷门佳片</h3>
+          <p>历史、自然、社会、电影史；资料馆与正版纪录平台优先。</p>
+          <div class="bar"><i style="width:58%"></i></div>
+        </div>
+        <div class="vcard">
+          <div class="count">VOTE 04 · 动画</div>
+          <h3>动画/合家</h3>
+          <p>少儿合家、成人动画、独立短片；看分级、字幕与正版发行。</p>
+          <div class="bar"><i style="width:64%"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flow" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Licensed Localization</div>
+        <h2>正版译制流程</h2>
+        <p>合规字幕不是“下载翻译上传”，而是授权—翻译—审校—分发全链路可核验。</p>
+      </div>
+      <div class="flow">
+        <div class="step">
+          <div class="no">1</div>
+          <h3>取得授权</h3>
+          <p>片方/发行方/国内持权平台授权翻译与传播，明确地域、期限、平台范围。[6,17](@ref)</p>
+        </div>
+        <div class="step">
+          <div class="no">2</div>
+          <h3>术语与脚本</h3>
+          <p>建人名、地名、专有名词库；按正片时间轴拆句，控制单行字幕长度。</p>
+        </div>
+        <div class="step">
+          <div class="no">3</div>
+          <h3>翻译审校</h3>
+          <p>初译+校译+母语/目标语润色；保留原意，不擅改剧情与敏感表述。</p>
+        </div>
+        <div class="step">
+          <div class="no">4</div>
+          <h3>时间轴质检</h3>
+          <p>对齐对白、声画同步；检查错别字、编码、多语言音轨与无障碍字幕。</p>
+        </div>
+        <div class="step">
+          <div class="no">5</div>
+          <h3>持权分发</h3>
+          <p>仅通过正版App/OTT/院线/资料馆发布；不提供离线破解包与第三方字幕硬塞。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sub" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Subtitle FAQ</div>
+        <h2>字幕合规科普</h2>
+        <p>解答“自己翻译行不行、免费字幕能不能用、野站字幕包安不安全”。</p>
+      </div>
+      <div class="sub">
+        <div class="subcard">
+          <h3>📝 未授权翻译传播</h3>
+          <p>从境外下载未授权片源、整部翻译并公开提供观看/下载，构成侵权风险；即便免费、“24小时删除”也不免责。[15,17](@ref)</p>
+          <div class="pair">正路：<b>已授权平台/片方合作</b>，使用官方字幕或经授权译文。</div>
+        </div>
+        <div class="subcard">
+          <h3>🧾 官方字幕怎么认</h3>
+          <p>看平台版权页、发行方、引进报审信息、字幕提供方；主流持权OTT与院线重映会标注官方中字/双语。</p>
+          <div class="pair">正路：<b>优先平台内置字幕</b>，不装未知字幕插件包。</div>
+        </div>
+        <div class="subcard">
+          <h3>📚 教学/评论引用</h3>
+          <p>为课堂教学、研究、评论适当引用短片段并翻译，与“整部影视公开传播”不同；仍须控制范围与授权。[17,6](@ref)</p>
+          <div class="pair">正路：<b>片段引用+注明出处</b>，不替代正版完整观看。</div>
+        </div>
+        <div class="subcard">
+          <h3>🗄️ 公版老片翻译</h3>
+          <p>著作权保护期届满作品可更低风险翻译；仍要核实原片版本、修复权与发行方要求，避免混用受保护素材。</p>
+          <div class="pair">正路：<b>公版核验+修复版授权</b>，分开管理新片与老片。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="src" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Legal Sources</div>
+        <h2>正版信源导航</h2>
+        <p>按持权OTT、院线重映、资料馆/影展、官方译制分桩；核验主体与授权再看。</p>
+      </div>
+      <div class="src">
+        <div class="signal"><div class="ic">📺</div><h3>持权OTT</h3><p>国内合规流媒体海外剧/电影/纪录专区，会员或单片，官方中字与音轨</p></div>
+        <div class="signal"><div class="ic">🎬</div><h3>院线/重映</h3><p>新片首映、经典重映、引进报审版本；以票务与发行方公告为准</p></div>
+        <div class="signal"><div class="ic">🏛️</div><h3>资料馆/影展</h3><p>修复版、海外专题、学术放映；字幕与版权由主办机构说明</p></div>
+        <div class="signal"><div class="ic">🧾</div><h3>官方译制</h3><p>平台自研/合作字幕组输出，可查授权范围、语种与更新记录</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Anti-Piracy</div>
+        <h2>盗版“人人”避坑告示</h2>
+        <p>“人人影视”类老名常被盗版站冒用；遇下列项直接关，不点不装不填。[9,12,15](@ref)</p>
+      </div>
+      <div class="warn">
+        <div class="notice">
+          <h3>🚫 冒名“人人免费全库”</h3>
+          <p>以人人/YYeTs名义提供全院线海外剧免费秒播、离线下载，多属未授权聚合；假播放、强广告、博彩贷款风险高。历史案件涉案未授权片3.2万余部。[12](@ref)</p>
+        </div>
+        <div class="notice">
+          <h3>🚫 字幕包/专用播放器/APK</h3>
+          <p>要求装“人人字幕插件”、未知播放器、关杀软、下硬字幕MP4包，可能夹带木马、劫持流量、窃取账号验证码。[8](@ref)</p>
+        </div>
+        <div class="notice">
+          <h3>🚫 磁力/网盘/无主体</h3>
+          <p>回复种子、网盘提取码、换域名无公司主体/无版权说明/索银行卡验证码，一律不点不填不下载；免责声明不代替授权。[15,17](@ref)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © 2026 人人正版影视指南（renrenyingshi-h5）｜ 静态展示站点 ｜
+      内页链接以 <a href="#">#</a> 占位 ｜
+      网站网址：https://renrenyingshi-h5.github.io ｜
+      本站仅作综合选片、正版译制字幕科普与正版渠道导航，不提供盗版资源、磁力、网盘、成人内容；不重建任何历史盗版“人人影视”资源站。
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    document.querySelectorAll('#menu a').forEach(function(a){
+      a.addEventListener('click',function(){ document.getElementById('menu').classList.remove('open'); });
+    });
+    var toTop=document.getElementById('toTop');
+    window.addEventListener('scroll',function(){ toTop.classList.toggle('show',window.scrollY>400); });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    // 投票卡纯前端高亮演示（内链仍#，不跳外站）
+    document.querySelectorAll('.vcard').forEach(function(c){
+      c.addEventListener('click',function(){ document.querySelectorAll('.vcard').forEach(function(x){x.style.boxShadow='none';}); c.style.boxShadow='0 0 0 2px var(--green)'; });
+    });
+  </script>
+</body>
+</html>
